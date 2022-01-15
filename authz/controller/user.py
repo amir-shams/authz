@@ -16,6 +16,7 @@ class UserController:
         """
         az user_schema ke sakhtim ta in abort 400 kare in 2ta if paein ro mikone
         """
+        # data = request.get_json()
         # if len(data) != 2:
         #     abort(400)
         # if "username" not in data or "password" not in data:
