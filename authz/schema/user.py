@@ -1,8 +1,6 @@
-from SKOBADIUM.authz.authz import model
+# from SKOBADIUM.authz.authz import model
 from authz import ma
 from authz.model import User
-
-
 
 
 
