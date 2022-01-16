@@ -8,7 +8,8 @@ class UserResource(Resource):
         if user_id is None:
             return UserController.get_users()
         else:
-            return UserController.get_user(user_id)            
+            return UserController.get_user(user_id)
+        
     def post(self):
         return UserController.create_user()
     
