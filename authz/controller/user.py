@@ -28,7 +28,7 @@ class UserController:
             db.session.commit()       # database create query
         except:
             db.session.rollback()
-            abort5(500)               # database error    
+            abort(500)               # database error    
         user_schema = UserSchema()
         return {
             "user" : user_schema.dump(user)
@@ -97,3 +97,4 @@ class UserController:
             db.session.rollback()
             abort(500)          #database error
         return {}, 204
+
