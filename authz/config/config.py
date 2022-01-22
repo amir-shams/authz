@@ -8,6 +8,12 @@ class Config:
 	DEBUG = int(environ.get("SKOB_AUTHZ_DEBUG", "0"))
 
 	TESTING = int(environ.get("SKOB_AUTHZ_TESTING", "0"))
+ 
+	SECRET = environ.get("SKOB_AUTHZ_SECRET", "VERY-HARD-SECURE-SECRET-CODE")
+ 
+	JWT_ALGO = environ.get("SKOB_AUTHZ_JWT_ALGO", "HS512")
+ 
+	JWT_TOKEN_LIFETIME = int(environ.get("SKOB_AUTHZ_LWT_TOKEN_LIFETIME", "86400"))
 
 	##########  database Configuration  ##########
 

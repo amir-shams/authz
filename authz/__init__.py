@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from flask import Flask                    #create web server
 from flask_marshmallow import Marshmallow  #rabete beyne resource va model va controler 
 from flask_migrate import Migrate          #convert db cod to table database 
@@ -11,7 +10,7 @@ ma = Marshmallow()
 mg = Migrate()
 api = Api()
 
-# from authz import resource
+from authz import resource
 
 def create_app():
     app = Flask(__name__)
