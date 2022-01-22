@@ -1,10 +1,7 @@
 from SKOBADIUM.authz.authz import model
+# from SKOBADIUM.authz.authz import model
 from authz import ma
 from authz.model import User
-
-
-
-
 
 class UserSchema(ma.SQLAlchemySchema):
     class Meta:
@@ -20,5 +17,3 @@ class UserSchema(ma.SQLAlchemySchema):
     last_active_at = ma.auto_field(dump_only = True)
     last_failed_at = ma.auto_field(dump_only = True)
     status = ma.auto_field()
-    
-    
