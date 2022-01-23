@@ -10,7 +10,8 @@ ma = Marshmallow()
 mg = Migrate()
 api = Api()
 
-from authz import resource
+from . import resource
+
 
 def create_app():
     app = Flask(__name__)

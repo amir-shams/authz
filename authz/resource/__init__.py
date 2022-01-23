@@ -1,8 +1,9 @@
-from crypt import methods
 from authz import api
 
 from authz.resource.auth import AuthTokenResource
 from authz.resource.user import UserResource
+
+
 
 api.add_resource(
     AuthTokenResource,
