@@ -1,6 +1,7 @@
 from functools import wraps
 from flask import abort, request
 from jwt import decode
+# from jwt import JWT
 from authz.config import Config
 from authz.rule import ControllerRule
 

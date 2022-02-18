@@ -1,0 +1,10 @@
+#!/bin/bash
+export FLASK_APP='authz'
+flask db upgrade 
+
+export SKOB_AUTHZ_BIND_ADDRESS=${SKOB_AUTHZ_BIND_ADDRESS:-0.0.0.0:8000}
+export SKOB_AUTHZ_NUM_WORKERS=${SKOB_AUTHZ_NUM_WORKERS:-4}
+
+gunicorn -b $SKOB_AUTHZ_BIND_ADDRESS \
+	-w $SKOB_AUTHZ_NUM_WORKERS \
+	--error-logfile - --access-logfile - "authz:create_app()"
