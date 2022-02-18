@@ -1,0 +1,3 @@
+[run]                  # in ke dastore run kardane coverage hast
+source = authz         # in mige to kodom app ya file in karo bokone
+branch = True          # ino hanoz nagofte
