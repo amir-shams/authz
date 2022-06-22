@@ -17,7 +17,7 @@ class Config:
 
 	##########  database Configuration  ##########
 
-	SQLALCHEMY_DATABASE_URI = environ.get("SKOB_AUTHZ_DATABASE_URI", "mysql+pymysql://authzuser:authzpass@localhost:3306/authz")    #None     localhost
+	SQLALCHEMY_DATABASE_URI = environ.get("SKOB_AUTHZ_DATABASE_URI", None )    #"mysql+pymysql://authzuser:authzpass@127.0.0.1:3306/authz"     localhost
 
 	SQLALCHEMY_TRACK_MODIFICATIONS = TESTING
 

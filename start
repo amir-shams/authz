@@ -1,10 +1,16 @@
 #!/bin/bash
-export FLASK_APP='authz'
+#export FLASK_APP='authz'
+
+sleep 30
+
 flask db upgrade 
 
-export SKOB_AUTHZ_BIND_ADDRESS=${SKOB_AUTHZ_BIND_ADDRESS:-0.0.0.0:8000}
-export SKOB_AUTHZ_NUM_WORKERS=${SKOB_AUTHZ_NUM_WORKERS:-4}
+#export SKOB_AUTHZ_BIND_ADDRESS=${SKOB_AUTHZ_BIND_ADDRESS:-0.0.0.0:8080}
+#export SKOB_AUTHZ_NUM_WORKERS=${SKOB_AUTHZ_NUM_WORKERS:-4}
 
-gunicorn -b $SKOB_AUTHZ_BIND_ADDRESS \
-	-w $SKOB_AUTHZ_NUM_WORKERS \
-	--error-logfile - --access-logfile - "authz:create_app()"
+
+gunicorn -b :8080 -w ${SKOB_AUTHZ_NUM_WORKERS} --error-logfile - --access-logfile - "authz:create_app()"
+
+
+
+#"${SKOB_AUTHZ_BIND_ADDRESS:-8080}"
